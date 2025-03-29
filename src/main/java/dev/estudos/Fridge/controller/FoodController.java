@@ -27,4 +27,9 @@ public class FoodController {
     public Food create(@RequestBody Food food) {
         return foodService.save(food);
     }
+
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable Long id) {
+        foodService.delete(id);
+    }
 }
